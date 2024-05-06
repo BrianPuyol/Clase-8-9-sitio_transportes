@@ -1,0 +1,68 @@
+/* 
+ font-family: "Open Sans", sans-serif; 
+ azul: #2e64a1
+*/
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 20px; /*interlineado*/
+}
+
+header{
+    background-color: #2e64a1;   
+}
+
+header h1{
+    color: white;
+    font-weight: 100;
+    font-style: italic;
+    /* display: inline-flex; */
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    /*Con estas 3 propiedas lo ubicas de forma más manual*/
+}
+
+nav{
+    background-color: #6da9ed;  
+}
+
+nav ul{ /*saca el margen entre el NAV y HEADER*/
+    margin: 0;
+    padding: 0;
+    list-style: none; /*saca los puntitos de la lista*/
+    display: flex;
+}
+
+nav ul li{
+    flex-grow: 1; /*acomoda los elementos*/
+}
+
+nav ul li a{ /*llamas solamente al "a" de NAV*/
+    color: white;
+    text-decoration: none; /*saca la línea del vínculo*/
+    /* background-color: orange; para que se entienda el flex y center*/
+    padding: 3px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a:hover{
+    background-color: rgb(0,0,0,0.3); /*el "0.3" le baja la intensidad al color que pusite*/
+}
+
+nav ul li a.activo{ /*le agregué la clase a "a"*/
+    background-color: #4c76a5;
+}
+
+footer{
+    background-color: #ccc;
+    padding: 20px 0px;
+    text-align: center; /*no hace falta propiedades de posicionamiento*/
+}
+
+.holder{ /*hay que ponerlo en el contedor, "configuracion base"*/
+    width: 960px;
+    margin: 0 auto;
+}
