@@ -27,6 +27,7 @@ header h1{
 
 nav{
     background-color: #6da9ed;  
+    margin-bottom: 20px; /*para separar la imagen, puedo separar el nav, no siempre img*/
 }
 
 nav ul{ /*saca el margen entre el NAV y HEADER*/
@@ -61,9 +62,160 @@ footer{
     background-color: #ccc;
     padding: 20px 0px;
     text-align: center; /*no hace falta propiedades de posicionamiento*/
+    margin-top: 20px;
 }
 
 .holder{ /*hay que ponerlo en el contedor, "configuracion base"*/
     width: 960px;
     margin: 0 auto;
+    /* background-color: orange; */
 }
+
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+}
+
+/*Home*/
+
+.columnas{
+    display: flex;
+}
+
+.bienvenidos{
+    width: 75%;
+    padding-right: 20px; /*para impedir que el parrafo choque*/
+    /* background-color: yellow; */
+}
+
+.testimonios{ /*Padre*/
+    width: 25%;
+}
+
+.bienvenidos p{
+    font-size: 20px;
+}
+
+.testimonio{ /*Hijo*/
+    background-color: #ccc;
+    padding: 16px;
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    display: block; /*para que el elemento baje, span trabaja en linea como "inline"*/
+}
+
+.testimonio .autor{
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    margin: 16px 0;
+}
+
+/*Fin home*/
+
+/*Inicio Nosotros*/
+
+.historia p{
+    font-size: 12px;
+}
+
+.personas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.persona{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 18%; /*Porque son 5 elemntos, dividido 5 es 20%, al poner 18%* ya generas el espacio*/
+    padding: 12px; /*Recordar poner siempre "box-sizing: border-box*/
+    box-sizing: border-box; /*Mantiene el padding sin perder la propieda flex*/
+}
+
+.persona img{
+    border-radius: 100px;
+    box-shadow: 0 0 5px black;
+    width: 40px;
+    margin-top: 10px 0 12px;
+}
+
+.persona h5, .persona h6{
+    color: #2e64a1;
+    margin: 0;
+    font-weight: normal;
+}
+
+.persona h5{
+    font-size: 14px;
+}
+
+.persona h6{
+    font-style: italic;
+    font-size: 13px;
+
+}
+
+.persona p{
+    font-size: 12px;
+}
+
+/*Fin nosotros*/
+
+/*Inicio contacto*/
+
+.contacto{
+    display: flex;
+}
+
+.contacto div{ /*los divs dentro de "holder contacto"*/
+    width: 100%;
+}
+
+.datos p{
+    font-size: 14px;
+}
+
+.datos ul li{
+    font-size: 13px;
+}
+
+.formulario p{
+    display: flex;
+}
+
+.formulario p label{
+    min-width: 100px;
+    background-color: yellow;
+}
+
+.formulario p input, .formulario p textarea{
+    width: 100%;
+    background-color: #ccc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.formulario p textarea{
+    resize: none; /*saca la opción de que en la pag te deje modificar el textarea*/
+    height: 150px;
+}
+
+.formulario input[type="submit"]{
+    background-color: #6da9ed;
+    width: auto;
+    padding: 8px;
+    box-shadow: 0 0 px rgba(0,0,0,0.3);
+    color: white;
+    cursor: pointer;
+    /* text-align: right; no porque ubica el texto dentro del cuadrado*/
+}
+
+
+/*Fin contacto*/
