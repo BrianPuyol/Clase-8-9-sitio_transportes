@@ -168,12 +168,14 @@ h2{
 
 /*Inicio contacto*/
 
-.contacto{
+.contacto{ /*holder contacto*/
     display: flex;
+    gap: 30px; /*en el elemento padre agrega espacio entre uno y otro*/
 }
 
 .contacto div{ /*los divs dentro de "holder contacto"*/
     width: 100%;
+
 }
 
 .datos p{
@@ -184,28 +186,37 @@ h2{
     font-size: 13px;
 }
 
-.formulario p{
-    display: flex;
-}
+/* .formulario p{
+    display: flex; ---- hace que el label + input esten en la misma linea
+} */
 
 .formulario p label{
     min-width: 100px;
     background-color: yellow;
+    display: flex;
+    align-items: center;
 }
 
-.formulario p input, .formulario p textarea{
+.formulario p input, 
+.formulario p textarea{
     width: 100%;
     background-color: #ccc;
     border: 1px solid #aaa;
     border-radius: 5px;
     padding: 6px;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 .formulario p textarea{
     resize: none; /*saca la opción de que en la pag te deje modificar el textarea*/
     height: 150px;
 }
+
+/* .formulario p:nth-child(4){ /*una pseudoclase como ":hover"*/ /*entre () elegis la p*/
+    /*background-color: orange; /*el problema es que si algo se agrega tenes que modi*/
+    /*align-items: start;*/
+/* }*/
 
 .formulario input[type="submit"]{
     background-color: #6da9ed;
@@ -214,7 +225,13 @@ h2{
     box-shadow: 0 0 px rgba(0,0,0,0.3);
     color: white;
     cursor: pointer;
+    /* position: relative;
+    left: 100px; */
     /* text-align: right; no porque ubica el texto dentro del cuadrado*/
+}
+
+.formulario input[type="submit"]:hover{
+    background-color: #2e64a1;
 }
 
 
