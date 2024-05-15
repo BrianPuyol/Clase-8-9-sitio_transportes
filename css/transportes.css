@@ -66,7 +66,7 @@ footer{
 }
 
 .holder{ /*hay que ponerlo en el contedor, "configuracion base"*/
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     /* background-color: orange; */
 }
@@ -77,6 +77,10 @@ h2{
 }
 
 /*Home*/
+
+.homeimg img{
+    max-width: 100%; /*achica la imagen al achicar la pantalla*/
+}
 
 .columnas{
     display: flex;
@@ -236,3 +240,72 @@ h2{
 
 
 /*Fin contacto*/
+
+/*Inicio @media 550*/
+
+@media screen and (max-width:550px){
+
+    .columnas{
+        flex-direction: column;
+    }
+
+    .bienvenidos,
+    .testimonios{
+        width: 100%;
+    }
+
+    .holder{
+        padding: 0 16px;
+    }
+
+    .personas{
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .persona{
+        width: 47%;
+    }
+
+    .contacto{
+        flex-direction: column;
+    }
+
+    .datos{ 
+        display: none; /*sirve para sacar algo*/
+    }
+
+    header .holder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 16px 0;
+    }
+
+    header h1{
+        position: static;
+        margin-left: 10px;
+        /* display: none; */
+        font-size: 27px;
+    }
+
+    header img{
+        max-width: 80px;
+    }
+
+}
+/*Fin @medio 550*/
+
+@media screen and (max-width:320px){
+
+    nav ul.holder{
+        flex-direction: column;
+        padding: 0;
+        
+    }
+
+
+
+
+}
+/*Fin @medio 320*/
