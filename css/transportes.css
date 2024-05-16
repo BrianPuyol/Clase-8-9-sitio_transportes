@@ -170,6 +170,45 @@ h2{
 
 /*Fin nosotros*/
 
+/*inicio servicios*/
+
+.servicio{
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.servicio img{
+    border-radius: 13px;
+    max-width: 225px; /*para que la imagen no se estire*/
+    display: block; /*para que la imagen no se estire*/
+}
+
+.servicio .info h4{
+    color: #2e64a1;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    border-bottom: 1px solid #2e64a1; /*cree una linea por medio de otra cosa*/
+    padding-bottom: 10px;
+}
+
+.servicio .info p{
+    font-size: 13px;
+    line-height: 25px; /*interlineado*/
+    box-sizing: border-box;
+} 
+
+
+
+
+
+
+/*fin servicios*/
+
 /*Inicio contacto*/
 
 .contacto{ /*holder contacto*/
@@ -304,8 +343,6 @@ h2{
         
     }
 
-
-
-
 }
 /*Fin @medio 320*/
+
