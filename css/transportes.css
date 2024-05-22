@@ -179,6 +179,7 @@ h2{
     display: flex;
     align-items: center;
     gap: 30px;
+    padding: 10px;
 }
 
 .servicio img{
@@ -201,6 +202,12 @@ h2{
     line-height: 25px; /*interlineado*/
     box-sizing: border-box;
 } 
+
+.servicio:nth-child(even){ /*los hijos pares*/
+    flex-direction: row-reverse;
+}
+
+
 
 
 
